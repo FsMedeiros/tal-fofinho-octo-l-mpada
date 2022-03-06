@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>Formulário de Contato</title>
+<style>
+  #nome { background: white; }
+  #nome:valid { outline: solid green 2px; }
+  #nome:invalid { outline: solid red 2px; }
+
+  #email { background: white; }
+  #email:valid { outline: solid green 2px; }
+  #email:invalid { outline: solid red 2px; }
+
+  #mensagem { background: white; }
+  #mensagem:valid { outline: solid green 2px; }
+  #mensagem:invalid { outline: solid red 2px; }
+  </style>
+ </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+        <!-- oculte a barra de acessibilidade ok -->
+        <div id="barra_acessibilidade" class="col-12">
+          <div class="d-none">
+            <ul id="atalhos">
+              <li><a href="#menu" accesskey="1">Ir para menu [1]</a></li>
+              <li><a href="#formulario" accesskey="2">Ir para formulário [2]</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<!-- faça com que as duas divs a seguir sejam exibidas lado a lado quando o viewport for maior ou igual a 576px sendo que a primeira deve ocupar 3/12 e a segunda 9/12 consulte: https://getbootstrap.com.br/docs/4.1/layout/grid/  ok-->
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-sm-2">
+        <img src="logo.xpto.png" alt="Logotipo da empresa com dois triângulos sobrepostos.">
+      </div>
+      <div class="col align-self-center">
+        <h1>Empresa XPTO</h1>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="conteiner">
+      <div class="row">
+        <div class="d-none">
+          <!-- oculte o header abaixo 
+          consulte https://getbootstrap.com.br/docs/4.1/utilities/display/  ok-->
+          <h2 id="menu">Menu</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+          <!-- torne o menu responsivo, conforme o exemplo
+          consulte https://getbootstrap.com.br/docs/4.1/components/navbar/ -->
+          <div class="conterner">
+          <div class="row">
+          <div class="d-block d-sm-none">
+            <div class="pos-f-t">
+              <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Contato</a></li>
+                  </ol>
+                   </div>
+                   </div>
+                     <nav class="navbar navbar-dark bg-dark">
+                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+                       <span class="navbar-toggler-icon"></span>
+                       </button>
+                     </nav>
+                     </div>
+                    </div>
+                  </div>
+                 </div>
+         <div class="conterner">
+          <div class="row">
+            <div class="col-2">
+              <div class="d-sm d-none d-sm-block">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Contato</a></li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+         </div>
+      
+        <article class="col-10">
+              
+       <h2 id="formulario">Formulário de Contato</h2>
+<!-- torne o formulário responsivo, conforme o exemplo consulte https://getbootstrap.com.br/docs/4.1/components/forms/ ok -->  
+<form action="/action.php" method="post">
+ <div class="conteiner">
+   <div class="form-group row">
+          <label id="inputNome3" class="col-sm-2 col-form-label">Nome*</label>
+     <div class="col-sm-10">
+      <input id=nome required placeholder="Nome" class="form-control">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label id="inputEmail3" class="col-sm-2 col-form-label">Email*</label>
+      <div class="col-sm-10">
+        <input id=email required placeholder="Email" class="form-control"  >
+      </div>
+    </div>
+    <div class="form-group row">
+      <label id="inputMensagem3" class="col-sm-2 col-form-label">Mensagem*</label>
+      <div class="col-sm-10">
+        <textarea id=mensagem required class="form-control"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary my-1">Enviar</button>
+       <div class="col-sm-10">
+      </div>
+     </div>
+    </div>
+</form>
+</article>
+
+      <footer class="row">
+        <div class="col-12">
+          <p>Copyright © 2021</p>
+        </div>
+      </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <noscript>Atualize seu navegador</noscript>
+
+  </body>
+</html>
